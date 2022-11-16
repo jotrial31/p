@@ -17,12 +17,12 @@ while parties != 0 and reponse2 == "oui" or reponse2 == "":
     #print(f' Le nombre secret est :  {secret} , il s\'affiche seulement pour faire des tests :) ')
     if reponse2.lower() == "oui":
         while nbr_essais != 0:
-            print(f'Tentatives restantes ->{[nbr_essais]} / partie(s) restante(s) -> {[parties]}')  #¤¤¤ [Ceci est le code secret: ->{[secret]}]¤¤¤')
-            devinette = int(input(f'DEVINNEZ le nombre secret entre [0 et 10 000] : '))
+            print(f'\nTentatives restantes ->{[nbr_essais]} / partie(s) restante(s) -> {[parties]}')
+            devinette = int(input(f'\nDEVINNEZ le nombre secret entre [0 et 10 000] :\n\t'))
             nbr_essais -= 1
             if devinette == secret:
                 parties_gagnees += 1
-                print(f'BRAVO vous avez trouvé !!! \nPartie(s) gagnée(s):{[parties_gagnees]} \nPartie(s) restante(s): {[parties]}')
+                print(f'\nBRAVO vous avez trouvé !!! \nPartie(s) gagnée(s):{[parties_gagnees]} \nPartie(s) restante(s): {[parties]}')
                 reponse2 = input("Voulez-vous rejouer ? ")
                 break
             elif nbr_essais > 0 and secret > devinette:
@@ -32,7 +32,7 @@ while parties != 0 and reponse2 == "oui" or reponse2 == "":
 
         else:
             print("PERDU vous n'avez pas réussi à trouver. ")
-            print(f'Le nombre secret était {[secret]}')
+            print(f'\nLe nombre secret était {[secret]}')
             reponse2 = input("Voulez-vous retenter votre chance ? : ")
 else:
     print(f'¤¤¤¤     [FIN DU GAME]     ¤¤¤¤')
